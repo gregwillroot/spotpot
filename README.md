@@ -20,7 +20,7 @@ Run the script from the command line using the command python spotpot.py. The Sp
 
 If the script is run multiple times, it will only search for the top tracks of the artists that have not been searched before. It keeps track of the last artist found in results.csv and skips it and all the artists before it in the artist.txt file.
 
-If it encounters an error while searching for a track, it will add the artist to a file named notfound.txt. This file lists the names of the artists that could not be found in the Spotify Web API.
+If it won't be able to find the artist, it will add it to a file named notfound.txt.
 
 Authentication
 ------------
