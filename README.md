@@ -2,25 +2,44 @@ SpotPot
 =======
 
 
-SpotPot searches for the top track for each artist in a list, using the Spotify Web API. 
-The script saves the results to a CSV file and logs any errors to a text file.
+SpotPot is a Python script that uses the Spotify Web API to search for top tracks of a list of artists and store their details in a CSV file. It is designed to be run periodically to keep the CSV file up-to-date.
 
-Installation
+Getting Started
 ------------
-To use this script, you will need to have Python 3 installed. You can download it from the official website: https://python.org 
+1. Clone the repository or download the script directly from the repository.
+2. Install the required packages using pip by running the command pip install -r requirements.txt.
+3. Create a file named ids.csv in the same directory as the script. In this file, list the client IDs and secrets of the Spotify Web API. You can obtain them from the Spotify Developer Dashboard.
+4. Create a file named artist.txt in the same directory as the script. In this file, list the names of the artists whose top tracks you want to search. Each artist should be on a separate line. For example:
 
-You will also need to install 'requests' package.
-You can install the package by running the following command:
-
-     pip install requests
+       Pink Floyd
+       U2
     
 Usage
 ------------
-    1. Clone the repository to your local machine or download the code.
-    2. Add your Spotify API client ID and secret to ids.csv. You can get your client ID and secret by creating a Spotify Developer account and creating a new app.
-    3. Add the artist names you want to search for in artist.txt. Each name should be on a separate line.
-    4. Run the script.
+Run the script from the command line using the command python spotpot.py. The SpotPot will search for the top track of each artist listed in artist.txt and store the details of the track in a file named results.csv. If results.csv does not exist, the script will create it.
 
-Notes
+If the script is run multiple times, it will only search for the top tracks of the artists that have not been searched before. It keeps track of the last artist found in results.csv and skips it and all the artists before it in the artist.txt file.
+
+If it encounters an error while searching for a track, it will add the artist to a file named notfound.txt. This file lists the names of the artists that could not be found in the Spotify Web API.
+
+Authentication
 ------------
-The script searches for the top track of each artist in a list, displays the real-time results, saves them to 'results.csv', logs any unfound tracks to 'notfound.txt', and can be resumed where left off, skipping already searched artists and continuing with the next artist in the list.
+The script uses the Client Credentials Flow to authenticate with the Spotify Web API. It reads the client IDs and secrets from ids.csv
+
+Output
+------------
+
+The results.csv file contains the following columns:
+
+    Year
+    Track ID
+    Track Name
+    Artist ID
+    Artist Name
+    Album ID
+    Popularity
+
+License
+------------
+
+This project is licensed under the MIT License.
