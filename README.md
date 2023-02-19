@@ -18,7 +18,7 @@ Usage
 ------------
     1. Clone the repository to your local machine or download the code.
     2. Add your Spotify API client ID and secret to ids.csv. You can get your client ID and secret by creating a Spotify Developer account and creating a new app.
-    3. Add the artist names you want to search for in artists.txt. Each name should be on a separate line.
+    3. Add the artist names you want to search for in artist.txt. Each name should be on a separate line.
     4. Run the script.
 
 Notes
