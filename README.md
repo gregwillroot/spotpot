@@ -2,7 +2,7 @@ SpotPot
 =======
 
 
-SpotPot is a Python script that uses the Spotify Web API to search for top tracks of a list of artists and store their details in a CSV file. It is designed to be run periodically to keep the CSV file up-to-date.
+SpotPot is a Python script that uses the Spotify Web API to search for top tracks of a list of artists and store their details in a CSV file.
 
 Getting Started
 ------------
