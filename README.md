@@ -24,7 +24,7 @@ If it encounters an error while searching for a track, it will add the artist to
 
 Authentication
 ------------
-The script uses the Client Credentials Flow to authenticate with the Spotify Web API. It reads the client IDs and secrets from ids.csv
+The script uses the Client Credentials Flow to authenticate with the Spotify Web API. It reads the client ID and secret ID from ids.csv
 
 Output
 ------------
