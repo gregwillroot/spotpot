@@ -7,7 +7,10 @@ SpotPot is a Python script that uses the Spotify Web API to search for top track
 Getting Started
 ------------
 1. Clone the repository or download the script directly from the repository.
-2. Install the required packages using pip by running the command pip install -r requirements.txt.
+2. Install the required packages using pip by running the command
+
+       pip install -r requirements.txt
+
 3. Create a file named ids.csv in the same directory as the script. In this file, list the client ID and secret ID of the Spotify Web API. You can obtain them from the Spotify Developer Dashboard.
 4. Create a file named artist.txt in the same directory as the script. In this file, list the names of the artists whose top tracks you want to search. Each artist should be on a separate line. For example:
 
