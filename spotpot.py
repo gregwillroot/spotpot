@@ -44,6 +44,19 @@ with open("results.csv", "r", newline="", encoding="utf-8") as csvfile:
         if len(row) > 0 and row[0] == "Year":
             continue
         last_found_artist = row[4]
+        
+# Deduplicate artist names while preserving order
+with open("artist.txt", "r", encoding="utf-8") as file:
+    lines = file.readlines()
+    seen = set()
+    deduped_lines = []
+    for line in lines:
+        line = line.strip()
+        if line not in seen:
+            seen.add(line)
+            deduped_lines.append(line)
+    with open("artist.txt", "w", encoding="utf-8") as outfile:
+        outfile.write("\n".join(deduped_lines))
 
 with open("artist.txt", "r", encoding="utf-8") as file:
     artists = file.read().splitlines()
